@@ -25,3 +25,10 @@ describe('rendering a post', () => {
     }));
   });
 });
+
+describe('formatting the post', () => {
+  it('returns the formatted post', () => {
+    const body = '**bold**'
+    expect(Post.formatPost(body)).toEqual('<p><strong>bold</strong></p>\n')
+  })
+})

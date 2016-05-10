@@ -12,6 +12,7 @@
     "front-matter": "2.0.7",
     "gulp": "3.9.1",
     "jasmine": "2.4.1",
+    "marked": "0.3.5",
     "through2": "2.0.1"
   },
   "devDependencies": {
