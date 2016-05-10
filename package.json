@@ -1,0 +1,21 @@
+{
+  "name": "bookblog",
+  "version": "1.0.0",
+  "description": "A blog for my writing",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "front-matter": "2.0.7",
+    "gulp": "3.9.1",
+    "jasmine": "2.4.1"
+  },
+  "devDependencies": {
+    "gulp-handlebars-html": "0.0.2",
+    "gulp-rename": "1.2.2",
+    "handlebars": "4.0.5"
+  }
+}
