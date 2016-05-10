@@ -1,13 +1,13 @@
 {
-  "name": "bookblog",
-  "version": "1.0.0",
+  "name": "totem",
+  "version": "0.0.1",
   "description": "A blog for my writing",
   "main": "Gulpfile.js",
   "scripts": {
     "test": "./node_modules/.bin/jasmine"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tom Kruijsen <tom@tomkruijsen.nl>",
+  "license": "MIT",
   "dependencies": {
     "front-matter": "2.0.7",
     "gulp": "3.9.1",
