@@ -13,3 +13,15 @@ describe('building a post', () => {
     expect(post.attributes.title).toEqual('Hello world');
   });
 });
+
+describe('rendering a post', () => {
+  const data = { attributes: { title: 'Title' }, body: 'Hello world' }
+
+  it('returns the rendered string', (done) => {
+    expect(Post.renderPost(data, (rendered) => {
+      expect(rendered).toContain('<h2>Title</h2>');
+      expect(rendered).toContain('<article>Hello world');
+      done();
+    }));
+  });
+});
