@@ -39,6 +39,15 @@ describe('rendering a post', () => {
       done();
     }));
   });
+
+  it('renders partials', (done) => {
+    const data = { attributes: { title: 'Title' }, body: '<p>Hello world</p>' }
+    expect(Post.renderPost(data, (rendered) => {
+      expect(rendered).toContain('<html>');
+      expect(rendered).toContain('</html>');
+      done();
+    }));
+  });
 });
 
 describe('formatting the post', () => {
