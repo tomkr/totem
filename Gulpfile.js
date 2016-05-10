@@ -2,11 +2,19 @@ var gulp = require('gulp');
 var handlebars = require('handlebars');
 var gulpHandlebars = require('gulp-handlebars-html')(handlebars);
 var rename = require('gulp-rename');
+const post = require('./tasks/post.js');
 
 // Builds the site into the `build` folder.
 gulp.task('build', function() {
   gulp.src('templates/*.hbs')
     .pipe(gulpHandlebars({}, {}))
+    .pipe(rename({extname: '.html'}))
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('buildPosts', () => {
+  gulp.src('posts/*.md')
+    .pipe(post.build)
     .pipe(rename({extname: '.html'}))
     .pipe(gulp.dest('build'));
 });
