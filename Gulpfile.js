@@ -4,6 +4,7 @@ var gulpHandlebars = require('gulp-handlebars-html')(handlebars);
 var rename = require('gulp-rename');
 const path = require('path');
 const connect = require('gulp-connect');
+const sass = require('gulp-sass');
 const post = require('./tasks/post.js');
 
 // Builds the site into the `build` folder.
@@ -20,6 +21,12 @@ gulp.task('buildPosts', () => {
     .pipe(post.build)
     .pipe(rename({extname: '.html'}))
     .pipe(gulp.dest(path.join('build', 'dev')));
+});
+
+gulp.task('sass', () => {
+  return gulp.src('src/static/stylesheets/style.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(path.join('build', 'dev', 'assets')));
 });
 
 // Puts a draft in the posts folder.
