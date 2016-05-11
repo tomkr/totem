@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var handlebars = require('handlebars');
 var gulpHandlebars = require('gulp-handlebars-html')(handlebars);
 var rename = require('gulp-rename');
+const livereload = require('gulp-livereload');
 const path = require('path');
 const connect = require('gulp-connect');
 const sass = require('gulp-sass');
@@ -26,7 +27,8 @@ gulp.task('buildPosts', () => {
 gulp.task('sass', () => {
   return gulp.src('src/static/stylesheets/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(path.join('build', 'dev', 'assets')));
+    .pipe(gulp.dest(path.join('build', 'dev', 'assets')))
+    .pipe(livereload());
 });
 
 // Puts a draft in the posts folder.
@@ -39,6 +41,8 @@ gulp.task('post', function(title) {
 
 // Serves the build folder.
 gulp.task('server', function(title) {
+  livereload.listen();
+  gulp.watch('src/static/stylesheets/**/*.scss', ['sass']);
   connect.server({
     root: 'build/dev'
   });
