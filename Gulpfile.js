@@ -21,7 +21,8 @@ gulp.task('buildPosts', () => {
   gulp.src('posts/*.md')
     .pipe(post.build)
     .pipe(rename({extname: '.html'}))
-    .pipe(gulp.dest(path.join('build', 'dev')));
+    .pipe(gulp.dest(path.join('build', 'dev')))
+    .pipe(livereload());
 });
 
 gulp.task('sass', () => {
@@ -43,6 +44,7 @@ gulp.task('post', function(title) {
 gulp.task('server', function(title) {
   livereload.listen();
   gulp.watch('src/static/stylesheets/**/*.scss', ['sass']);
+  gulp.watch('templates/**/*.hbs', ['buildPosts']);
   connect.server({
     root: 'build/dev'
   });
