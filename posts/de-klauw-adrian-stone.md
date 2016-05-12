@@ -1,5 +1,6 @@
 ---
 title: De Klauw – Adrian Stone
+image: /images/de-klauw-adrian-stone.png
 ---
 De Klauw brengt weinig vernieuwends naar het fantasy genre. Het verhaal staat bol van de avontuur, maar bevat weinig anders. Het tempo ligt hoog en het plot lijkt mee te doen met een Formule 1-race. Het verhaal wordt op geen enkel moment saai en het leest lekker weg. De vraag die bij mij opkomt is of dat genoeg is om nog een goede fantasyroman te schrijven. Het grote avontuur hebben we namelijk al heel vaak langs zien komen. Wat voegt De Klauw toe om het net dat beetje extra te geven?
 
