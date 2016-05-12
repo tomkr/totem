@@ -1,6 +1,7 @@
 {{> header}}
-  <div class='post'>
-    <h2>{{attributes.title}}</h2>
-    <article>{{body}}</article>
+  <div class='content'>
+    <h2 class='post__title'>{{attributes.title}}</h2>
+    <img class='post__image' src='{{attributes.image}}' />
+    <article class='post__body'>{{body}}</article>
   </div>
 {{> footer}}

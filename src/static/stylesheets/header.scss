@@ -1,0 +1,27 @@
+header {
+  background: white;
+  font-family: 'Roboto', sans-serif;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+h1 {
+  padding: {
+    left: 40px;
+    right: 40px;
+    bottom: 10px;
+  }
+  padding-top: 10px;
+  font-weight: 200;
+  font-size: 3em;
+}
+
+.header__subtitle {
+  padding: {
+    left: 52px;
+    right: 40px;
+    bottom: 20px;
+  }
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #777;
+}

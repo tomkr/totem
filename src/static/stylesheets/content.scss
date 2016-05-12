@@ -1,0 +1,9 @@
+.content {
+  background: white;
+  max-width: 750px;
+  margin: 40px auto;
+  @media (min-width: 1200px) {
+    float: left;
+  }
+  border: 1px solid #f0f0f0;
+}

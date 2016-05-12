@@ -1,0 +1,29 @@
+.post__title {
+  margin: {
+    left: 40px;
+    right: 40px;
+  }
+  padding: {
+    top: 25px;
+    bottom: 15px;
+  }
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.8em;
+}
+
+.post__body {
+  margin: {
+    left: 40px;
+    right: 40px;
+  }
+  padding-bottom: 20px;
+}
+
+.post__image {
+  width:100%;
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
+}
