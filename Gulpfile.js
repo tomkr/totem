@@ -19,7 +19,7 @@ gulp.task('build', function() {
 //Build all the post pages.
 gulp.task('buildPosts', () => {
   gulp.src('posts/*.md')
-    .pipe(post.build)
+    .pipe(post.build())
     .pipe(rename({extname: '.html'}))
     .pipe(gulp.dest(path.join('build', 'dev')))
     .pipe(livereload());

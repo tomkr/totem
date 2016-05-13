@@ -12,11 +12,11 @@ describe('building a post from a vinyl stream', () => {
       base: path.dirname(filePath),
       contents: fs.readFileSync(filePath)
     });
-    stream = post.build;
-    stream.on('data', (file) => {
+    stream = post.build();
+    stream.once('data', (file) => {
       expect(file.contents.toString()).toContain('Hello world');
     });
-    stream.on('end', done);
+    stream.once('end', done);
     stream.write(file);
     stream.end();
   });
