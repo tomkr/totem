@@ -8,19 +8,19 @@ h1 {
   padding: {
     left: 40px;
     right: 40px;
-    bottom: 10px;
+    top: 10px;
   }
-  padding-top: 10px;
   font-weight: 200;
   font-size: 3em;
 }
 
 .header__subtitle {
   padding: {
-    left: 52px;
+    left: 40px;
     right: 40px;
     bottom: 20px;
   }
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: #777;
