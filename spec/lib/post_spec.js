@@ -17,36 +17,36 @@ describe('building a post', () => {
 describe('rendering a post', () => {
   it('returns the rendered string', (done) => {
     const data = { attributes: { title: 'Title' }, body: 'Hello world' }
-    expect(Post.renderPost(data, (rendered) => {
-      expect(rendered).toContain('<h2>Title</h2>');
-      expect(rendered).toContain('<article>Hello world');
+    Post.renderPost(data, (rendered) => {
+      expect(rendered).toContain('Title');
+      expect(rendered).toContain('Hello world');
       done();
-    }));
+    });
   });
 
   it('leaves html in the body', (done) => {
     const data = { attributes: { title: 'Title' }, body: '<p>Hello world</p>' }
-    expect(Post.renderPost(data, (rendered) => {
-      expect(rendered).toContain('<article><p>Hello world');
+    Post.renderPost(data, (rendered) => {
+      expect(rendered).toContain('<p>Hello world</p>');
       done();
-    }));
+    });
   });
 
   it('does not change data', (done) => {
     const data = { attributes: { title: 'Title' }, body: '<p>Hello world</p>' }
-    expect(Post.renderPost(data, (rendered) => {
+    Post.renderPost(data, (rendered) => {
       expect(data).toEqual({ attributes: { title: 'Title' }, body: '<p>Hello world</p>' });
       done();
-    }));
+    });
   });
 
   it('renders partials', (done) => {
     const data = { attributes: { title: 'Title' }, body: '<p>Hello world</p>' }
-    expect(Post.renderPost(data, (rendered) => {
+    Post.renderPost(data, (rendered) => {
       expect(rendered).toContain('<html>');
       expect(rendered).toContain('</html>');
       done();
-    }));
+    });
   });
 });
 
